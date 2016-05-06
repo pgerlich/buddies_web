@@ -1,6 +1,6 @@
 //Angular stuffs
 var myApp = angular.module('myApp', []);
-angular.module("myApp").controller("navBar", function($scope){
+angular.module("myApp").controller("navBar", function ($scope) {
 
     //Initialize Parse
     Parse.$ = jQuery;
@@ -8,7 +8,7 @@ angular.module("myApp").controller("navBar", function($scope){
 
     $scope.user = Parse.User.current();
 
-    if (!$scope.user){
+    if (!$scope.user) {
         //do nothing
         $scope.role = -1;
     } else {

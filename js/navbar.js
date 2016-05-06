@@ -1,6 +1,6 @@
 //Angular stuffs
 
-angular.module("myApp").controller("navBar", function($scope){
+angular.module("myApp").controller("navBar", function ($scope) {
 
     //Initialize Parse
     Parse.$ = jQuery;
@@ -8,7 +8,7 @@ angular.module("myApp").controller("navBar", function($scope){
 
     $scope.user = Parse.User.current();
 
-    if (!$scope.user){
+    if (!$scope.user) {
         window.location.assign("login")
     } else {
 

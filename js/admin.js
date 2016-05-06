@@ -1,6 +1,6 @@
 //Angular stuffs
 angular.module("myApp", ['ngAnimate', 'ui.bootstrap', 'flow']);
-angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
+angular.module("myApp").controller("mainCtrl", function ($scope, $uibModal) {
     //Job status constants
     const STATUS_UNCLAIMED = 0;
     const STATUS_CLAIMED = 1;
@@ -21,38 +21,46 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 
     $scope.analyticCounts = {};
 
-    if (!$scope.user){
+    if (!$scope.user) {
         window.location.assign("login")
     }
 
     /**
      Grab all employees
      */
-    $scope.getEmployees = function(){
+    $scope.getEmployees = function () {
         var query = new Parse.Query("User");
         query.equalTo("role", 1);
 
         query.find({
-            success: function(results) {
+            success: function (results) {
 
                 // Add employees
-                for(var i = 0; i < results.length; i++ ) {
+                for (var i = 0; i < results.length; i++) {
                     var user = results[i];
-                    var userMap = {first : user.get('firstName'), last : user.get('lastName'), email : user.get('email'), id : user.id , stripeUser : user, washCount: '...', tipTotal: '...' };
+                    var userMap = {
+                        first: user.get('firstName'),
+                        last: user.get('lastName'),
+                        email: user.get('email'),
+                        id: user.id,
+                        stripeUser: user,
+                        washCount: '...',
+                        tipTotal: '...'
+                    };
                     $scope.employeeList.push(userMap);
                 }
 
                 $scope.$apply();
 
                 // Update employee analytics
-                for ( var i = 0; i < $scope.employeeList.length; i++ ) {
+                for (var i = 0; i < $scope.employeeList.length; i++) {
                     var employee = $scope.employeeList[i];
                     $scope.updateEmployeeAnalytics(employee['id'], i);
                 }
 
                 $scope.$apply();
             },
-            error: function(error) {
+            error: function (error) {
                 alert("Error: " + error.code + " " + error.message); //TODO: Error handling
             }
         });
@@ -65,14 +73,14 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
      * @param status
      * @returns {*}
      */
-    function convertStatusToString(status){
+    function convertStatusToString(status) {
         if (status == STATUS_UNCLAIMED) {
             return "Unclaimed";
-        } else if ( status == STATUS_CLAIMED ) {
+        } else if (status == STATUS_CLAIMED) {
             return "Claimed";
-        } else if ( status == STATUS_COMPLETE ) {
+        } else if (status == STATUS_COMPLETE) {
             return "Complete - Unpaid";
-        } else if ( status = STATUS_PAID ) {
+        } else if (status = STATUS_PAID) {
             return "Complete - Paid";
         }
     }
@@ -80,32 +88,37 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
     /**
      Grab all employees
      */
-    $scope.getAllWashes = function(){
+    $scope.getAllWashes = function () {
         var query = new Parse.Query("Jobs");
         query.include('vehicle');
         query.include('customer');
         query.include('employee');
 
         query.find({
-            success: function(results) {
+            success: function (results) {
 
                 // Add employees
-                for(var i = 0; i < results.length; i++ ) {
+                for (var i = 0; i < results.length; i++) {
                     var job = results[i];
                     var customer = job.get('customer');
                     var employee = job.get('employee');
                     var jobType = job.get('vehicle').type == 0 ? 'Sedan' : 'Non-Sedan';
                     var paymentBase = jobType == 'Sedan' ? 20 : 23;
 
-                    var jobMap = {id : job.get('washId'), customerName : customer.get('firstName') + ' ' + customer.get('lastName'), vehicleType : jobType , status : convertStatusToString(job.get('status')) };
+                    var jobMap = {
+                        id: job.get('washId'),
+                        customerName: customer.get('firstName') + ' ' + customer.get('lastName'),
+                        vehicleType: jobType,
+                        status: convertStatusToString(job.get('status'))
+                    };
 
-                    if ( job.get('tip') != null ) {
+                    if (job.get('tip') != null) {
                         jobMap.paymentTotal = '$' + String(paymentBase + (Number(job.get('tip')) / 100));
                     } else {
                         jobMap.paymentTotal = "N/A";
                     }
 
-                    if ( job.get('status') > 0 ) {
+                    if (job.get('status') > 0) {
                         jobMap.employeeName = employee.get('firstName') + ' ' + employee.get('lastName');
                     } else {
                         jobMap.employeeName = "N/A";
@@ -118,7 +131,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 
                 $scope.retrieveAnalytics();
             },
-            error: function(error) {
+            error: function (error) {
                 alert("Error: " + error.code + " " + error.message); //TODO: Error handling
             }
         });
@@ -127,12 +140,12 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
     $scope.getAllWashes();
 
 
-    $scope.retrieveAnalytics = function() {
+    $scope.retrieveAnalytics = function () {
         var query = new Parse.Query("WashAnalytics");
 
         query.find({
             success: function (results) {
-                for( var i = 0; i < results.length; i++ ) {
+                for (var i = 0; i < results.length; i++) {
                     var analytic = results[i];
                     $scope.analyticCounts[analytic.get("stat")] = analytic.get("value");
                 }
@@ -142,35 +155,35 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
         });
     }
 
-    $scope.displayAnalytics = function() {
+    $scope.displayAnalytics = function () {
         $scope.displaySedanStatistics();
         $scope.displayGlobalDayOfWeekStatistics();
         $scope.displayCurrentWeekStatistics();
         $scope.displayTimeAnalytics();
     }
 
-    $scope.displayCurrentWeekStatistics = function(){
+    $scope.displayCurrentWeekStatistics = function () {
         alert("TODO: Week by week");
     }
 
     $scope.displaySedanStatistics = function () {
         var sedanData = {
-            labels : ["Sedan","Non-Sedan"],
-            datasets : [
+            labels: ["Sedan", "Non-Sedan"],
+            datasets: [
                 {
-                    fillColor : "rgba(151,187,205,0.5)",
-                    strokeColor : "rgba(151,187,205,0.8)",
-                    highlightFill : "rgba(151,187,205,0.75)",
-                    highlightStroke : "rgba(151,187,205,1)",
-                    data : [$scope.analyticCounts["SedanWashes"], $scope.analyticCounts["NonSedanWashes"]]
+                    fillColor: "rgba(151,187,205,0.5)",
+                    strokeColor: "rgba(151,187,205,0.8)",
+                    highlightFill: "rgba(151,187,205,0.75)",
+                    highlightStroke: "rgba(151,187,205,1)",
+                    data: [$scope.analyticCounts["SedanWashes"], $scope.analyticCounts["NonSedanWashes"]]
                 }
             ]
         }
 
-        var sedanCanvas  = document.getElementById("sedanAnalytic").getContext("2d");
+        var sedanCanvas = document.getElementById("sedanAnalytic").getContext("2d");
 
         window.sedanGraph = new Chart(sedanCanvas).Bar(sedanData, {
-            responsive : true
+            responsive: true
         });
 
     }
@@ -192,7 +205,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
             ]
         };
 
-        var DOWCanvas  = document.getElementById("globalDOWAnalytic").getContext("2d");
+        var DOWCanvas = document.getElementById("globalDOWAnalytic").getContext("2d");
 
         window.globalDOWGraph = new Chart(DOWCanvas).Line(globalDOWData, {
             bezierCurve: false
@@ -200,27 +213,27 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
     }
 
     $scope.displayTimeAnalytics = function () {
-        var time = ["8:00AM - 9:00AM","9:00AM - 10:00AM", "10:00AM - 11:00AM", "11:00AM - 12:00PM", "12:00AM - 1:00PM", "1:00PM - 2:00PM", "2:00PM - 3:00PM", "3:00PM - 4:00PM", "4:00PM - 5:00PM", "5:00PM - 6:00PM", "6:00PM - 7:00PM"]
+        var time = ["8:00AM - 9:00AM", "9:00AM - 10:00AM", "10:00AM - 11:00AM", "11:00AM - 12:00PM", "12:00AM - 1:00PM", "1:00PM - 2:00PM", "2:00PM - 3:00PM", "3:00PM - 4:00PM", "4:00PM - 5:00PM", "5:00PM - 6:00PM", "6:00PM - 7:00PM"]
 
         var timeData = {
-            labels : [time[0], time[1], time[2], time[3], time[4], time[5], time[7], time[7], time[8], time[9], time[10]],
-            datasets : [
+            labels: [time[0], time[1], time[2], time[3], time[4], time[5], time[7], time[7], time[8], time[9], time[10]],
+            datasets: [
                 {
-                    fillColor : "rgba(151,187,205,0.5)",
-                    strokeColor : "rgba(151,187,205,0.8)",
-                    highlightFill : "rgba(151,187,205,0.75)",
-                    highlightStroke : "rgba(151,187,205,1)",
-                    data : [$scope.analyticCounts["8AM"], $scope.analyticCounts["9AM"], $scope.analyticCounts["10AM"]
-                    , $scope.analyticCounts["11AM"], $scope.analyticCounts["12PM"], $scope.analyticCounts["1PM"], $scope.analyticCounts["2PM"]
-                    , $scope.analyticCounts["3PM"], $scope.analyticCounts["4PM"], $scope.analyticCounts["5PM"], $scope.analyticCounts["6PM"] ]
+                    fillColor: "rgba(151,187,205,0.5)",
+                    strokeColor: "rgba(151,187,205,0.8)",
+                    highlightFill: "rgba(151,187,205,0.75)",
+                    highlightStroke: "rgba(151,187,205,1)",
+                    data: [$scope.analyticCounts["8AM"], $scope.analyticCounts["9AM"], $scope.analyticCounts["10AM"]
+                        , $scope.analyticCounts["11AM"], $scope.analyticCounts["12PM"], $scope.analyticCounts["1PM"], $scope.analyticCounts["2PM"]
+                        , $scope.analyticCounts["3PM"], $scope.analyticCounts["4PM"], $scope.analyticCounts["5PM"], $scope.analyticCounts["6PM"]]
                 }
             ]
         }
 
-        var timeCanvas  = document.getElementById("timeAnalytic").getContext("2d");
+        var timeCanvas = document.getElementById("timeAnalytic").getContext("2d");
 
         window.sedanGraph = new Chart(timeCanvas).Bar(timeData, {
-            responsive : true
+            responsive: true
         });
 
     }
@@ -258,7 +271,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
         modalInstance.result.then(function (employeeInfo) {
 
             //Create employee object in stripe
-            $.get( "http://paulgerlich.com/__projects/buddys/php/createEmployee.php?EMAIL=" + employeeInfo.email, function( data ) {
+            $.get("http://paulgerlich.com/__projects/buddys/php/createEmployee.php?EMAIL=" + employeeInfo.email, function (data) {
 
                 var employeeId = JSON.parse(data.slice(21, data.len)).id;
 
@@ -274,7 +287,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 
                 //Call parse signup function
                 user.signUp(null, {
-                    success: function(user) {
+                    success: function (user) {
                         //Create employee analytics entry
                         var AnalyticObject = Parse.Object.extend("EmployeeAnalytics");
                         var employeeAnalytic = new AnalyticObject();
@@ -284,9 +297,9 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
                         employeeAnalytic.set("washTotal", 0);
 
                         employeeAnalytic.save(null, {
-                            success: function(newEmployee) {
+                            success: function (newEmployee) {
 
-                            }, error: function(e) {
+                            }, error: function (e) {
                                 console.log(e);
                             }
                         });
@@ -296,10 +309,10 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
                         $scope.getEmployees();
 
                         //Add supplemental employee information to stripe
-                        $.get( "http://paulgerlich.com/__projects/buddys/php/addEmployeeInformation" +
+                        $.get("http://paulgerlich.com/__projects/buddys/php/addEmployeeInformation" +
                             ".php?ACCID=" + employeeId + "&MONTH=" + employeeInfo.month +
                             "&DAY=" + employeeInfo.day + "&YEAR=" + employeeInfo.year +
-                            "&FIRST=" + employeeInfo.first + "&LAST=" + employeeInfo.last, function( data ) {
+                            "&FIRST=" + employeeInfo.first + "&LAST=" + employeeInfo.last, function (data) {
                             $scope.tempEmployeeId = employeeId;
 
                             //Call to stripe.JS to tokenize information
@@ -314,7 +327,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
                         });
 
                     },
-                    error: function(user, error) {
+                    error: function (user, error) {
                         // Show the error message somewhere and let the user try again.
                         alert("Error: " + error.code + " " + error.message);
                     }
@@ -343,13 +356,13 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
     //}
 
     //Save the bank account
-    $scope.saveBankAcc = function(status, response){
+    $scope.saveBankAcc = function (status, response) {
 
-        if ( response.error ) {
+        if (response.error) {
             console.log(response.error);
             console.log("TODO: input validation");
         } else {
-            $.get( "http://paulgerlich.com/__projects/buddys/php/addBankToEmployee.php?ACCID=" + $scope.tempEmployeeId + "&TOKEN=" + response.id, function( data ) {
+            $.get("http://paulgerlich.com/__projects/buddys/php/addBankToEmployee.php?ACCID=" + $scope.tempEmployeeId + "&TOKEN=" + response.id, function (data) {
 
                 $scope.$apply();
             });
@@ -374,7 +387,17 @@ angular.module('myApp').controller('employeeCreateController', function ($scope,
 
     $scope.ok = function () {
         //TODO: Validate inputs
-        $uibModalInstance.close({first: $scope.first, last: $scope.last, email: $scope.email, password: $scope.password, month: $scope.month, day: $scope.day, year: $scope.year, routing: $scope.routingNumber, account: $scope.accountNumber});
+        $uibModalInstance.close({
+            first: $scope.first,
+            last: $scope.last,
+            email: $scope.email,
+            password: $scope.password,
+            month: $scope.month,
+            day: $scope.day,
+            year: $scope.year,
+            routing: $scope.routingNumber,
+            account: $scope.accountNumber
+        });
     };
 
     $scope.cancel = function () {
