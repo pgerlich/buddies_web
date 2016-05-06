@@ -1,0 +1,398 @@
+[13-Jan-2016 04:53:36 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/pgerlich/public_html/__projects/buddys/php/addCard.php on line 14
+[13-Jan-2016 05:27:12 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such source: card_17Smm5LauMCMebotK5RqLy46' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7iDCE4He2sfGrw'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 404, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 404, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('get', '/v1/customers/c...', NULL, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('get', '/v1/customers/c...', NULL, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(34): Stripe\ApiResource in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[13-Jan-2016 05:32:07 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such source: card_17SmpRLauMCMebotUGiM0RE7' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7iDHgi2LWkbzEZ'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 404, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 404, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('get', '/v1/customers/c...', NULL, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('get', '/v1/customers/c...', NULL, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(34): Stripe\ApiResource in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[15-Jan-2016 17:43:19 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such source: card_17THgZLauMCMebotxO4ajbgY' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7j9WjINCi3rRTA'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 404, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 404, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('get', '/v1/customers/c...', NULL, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('get', '/v1/customers/c...', NULL, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(34): Stripe\ApiResource in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[16-Jan-2016 05:03:03 America/Chicago] PHP Fatal error:  Class 'Stripe\Stripe' not found in /home2/pgerlich/public_html/__projects/buddys/php/createCustomer.php on line 4
+[16-Jan-2016 05:03:40 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17TroVLauMCMebothUG8dLUY.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7jKVj7bOf69L03'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[16-Jan-2016 05:05:49 America/Chicago] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in /home2/pgerlich/public_html/__projects/buddys/php/createCustomer.php on line 9
+[26-Jan-2016 20:26:37 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17Xj0w2eZvKYlo2Cjh4mW3wo' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7nJe56cDmBSzxq'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers/c...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('post', '/v1/customers/c...', Array, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(19): Stripe\ApiResour in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[26-Jan-2016 20:27:49 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17Xj252eZvKYlo2Cc4lBqRoN' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7nJfOjH17RLBGM'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers/c...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('post', '/v1/customers/c...', Array, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(19): Stripe\ApiResour in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[26-Jan-2016 20:28:40 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17Xj2u2eZvKYlo2ClelvfzkE' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7nJgNRhzNBUw7w'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers/c...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('post', '/v1/customers/c...', Array, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(19): Stripe\ApiResour in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[26-Jan-2016 20:31:45 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17Xj3x2eZvKYlo2CeO4hHksg' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7nJjz9Nmn2DwCE'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers/c...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('post', '/v1/customers/c...', Array, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(19): Stripe\ApiResour in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[03-Feb-2016 21:15:14 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7qKEb347mhe8Ob'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[03-Feb-2016 21:15:19 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7qKEsntlyZHLtF'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[03-Feb-2016 21:17:09 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7qKGG8YyZNdyWc'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[03-Feb-2016 21:18:38 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7qKIQHWNXzUZed'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[03-Feb-2016 21:24:32 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7qKOJGVgQAITWL'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[04-Feb-2016 16:08:00 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\Api' with message 'Error while communicating with one of our backends.  Sorry about that!  We have been notified of the problem.  If you have any questions, we can help at https://support.stripe.com/.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:111 from API request 'req_7qcVycTvjAJRHM'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 500, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 500, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(27): Stripe\ApiRequestor->request('get', '/v1/customers/c...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(121): Stripe\ApiResource->refresh()
+#4 /home2/pgerlich/public_html/__projects/buddys/php in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 111
+[06-Feb-2016 16:20:42 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7rNAoIzdWwJlCr'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[06-Feb-2016 16:20:48 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7rNA36ixdLLAV6'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[06-Feb-2016 16:20:56 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7rNAxEQrLwtVPc'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[09-Feb-2016 23:26:52 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Received unknown parameters: legal_entity.dob.day, legal_entity.dob.month, legal_entity.dob.year, legal_entity.first_name, legal_entity.last_name, legal_entity.type, transfer_schedule.delay_days' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7sbiYMCGYi1jua'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/accounts', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/accounts', Arr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[10-Feb-2016 00:17:50 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Received unknown parameter: external_accounts' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7scXlTr7EauHxY'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/accounts/ac...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('post', '/v1/accounts/ac...', Array, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(153): Stripe\ApiRe in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[11-Feb-2016 23:28:01 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7tMB57qgj8rXV0'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[12-Feb-2016 22:23:37 America/Chicago] PHP Fatal error:  Class 'Stripe\Charge' not found in /home2/pgerlich/public_html/__projects/buddys/php/payForWash.php on line 20
+[12-Feb-2016 23:10:18 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such customer: RxiVkdzrgb' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7tj7AKxjllGylP'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__proj in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[12-Feb-2016 23:10:52 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such customer: RxiVkdzrgb' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7tj81ik093hbQh'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__proj in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[12-Feb-2016 23:59:59 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You cannot set 'id'to an empty string. We interpret empty strings as NULL in requests. You may set obj->id = NULL to delete the property' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/StripeObject.php:83
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/StripeObject.php(75): Stripe\StripeObject->__set('id', '')
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(120): Stripe\StripeObject->__construct('', Object(Stripe\Util\RequestOptions))
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(15): Stripe\ApiResource::_retrieve('', NULL)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/retrieveCustomer.php(8): Stripe\Customer::retrieve('')
+#4 {main}
+  thrown in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/StripeObject.php on line 83
+[13-Feb-2016 00:31:07 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: [object Object]' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7tkQFe9uXHcywg'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_htm in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[15-Feb-2016 22:29:43 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17f0ScLauMCMebotut3EBjFi.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7uq9svrSfC9mGV'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[16-Feb-2016 21:21:14 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such merchant: cus_7uqA7qRiLSOTCC' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7vCG1IuzN8uUB0'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_htm in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:21:24 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXV3MxvTct7ff'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:22:09 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: undefined' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXVLveOlf3Hb2'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_html/__pr in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:22:54 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWbYd9YTxBBg'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:02 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWvB8ANpoAQR'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:04 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWwkJRWX14GD'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:05 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWJfjFiGNSiL'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:06 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWDbg1iHnV8x'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:06 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWITiFQL0gNU'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:06 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWK7A0WitHHk'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:06 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWrgnmtuxBpw'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:08 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWZaxZg1juv8'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:13 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWXj4EXeeKNT'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[20-Feb-2016 11:23:15 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17geRFLauMCMebotw50EyFYf.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7wXWgAJbpzopq9'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[24-Feb-2016 00:29:42 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such merchant: cus_7qKRiYiarBBMZS' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7xrtTFF1NfRCUG'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_htm in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[27-Feb-2016 14:09:33 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such source: card_17f0ScLauMCMebotJUcXwiRN' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7zCnV6bK2mYMuM'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 404, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 404, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('get', '/v1/customers/c...', NULL, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('get', '/v1/customers/c...', NULL, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Collection.php(34): Stripe\ApiResource in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[27-Feb-2016 15:34:47 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such merchant: cus_7qKRiYiarBBMZS' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_7zEAUXdqIZ9g8C'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_htm in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[05-Apr-2016 20:45:29 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You cannot use a Stripe token more than once: tok_17x5jJLauMCMebot0DhKlxwh.' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_8DWnef4DwsHE47'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Customer.php(37): Stripe\ApiResource::_crea in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[09-Apr-2016 01:04:33 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You cannot set 'month'to an empty string. We interpret empty strings as NULL in requests. You may set obj->month = NULL to delete the property' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/StripeObject.php:83
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/addEmployeeInformation.php(11): Stripe\StripeObject->__set('month', '')
+#1 {main}
+  thrown in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/StripeObject.php on line 83
+[09-Apr-2016 01:08:34 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Not a valid birth year' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_8Eiisu4pMFkID8'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/accounts/ac...', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(99): Stripe\ApiResource::_staticRequest('post', '/v1/accounts/ac...', Array, Object(Stripe\Util\RequestOptions))
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(153): Stripe\ApiResource->_request('post' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[13-Apr-2016 15:45:47 America/Chicago] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such merchant: cus_7uqA7qRiLSOTCC' in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php:103 from API request 'req_8GRlVwUNj1GLcx'
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(217): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiResource.php(142): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home2/pgerlich/public_htm in /home2/pgerlich/public_html/__projects/buddys/php/stripe/lib/ApiRequestor.php on line 103
+[19-Apr-2016 13:02:23 America/Chicago] PHP Warning:  require_once(swiftmailer/lib/swift_required.php): failed to open stream: No such file or directory in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 4
+[19-Apr-2016 13:02:23 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'swiftmailer/lib/swift_required.php' (include_path='.:/opt/php54/lib/php') in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 4
+[19-Apr-2016 13:04:10 America/Chicago] PHP Warning:  require_once(swiftmailer/lib/swift_required.php): failed to open stream: No such file or directory in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 4
+[19-Apr-2016 13:04:10 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'swiftmailer/lib/swift_required.php' (include_path='.:/opt/php54/lib/php') in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 4
+[19-Apr-2016 13:11:51 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 45
+[19-Apr-2016 13:12:09 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 45
+[19-Apr-2016 13:39:58 America/Chicago] PHP Parse error:  syntax error, unexpected 'alert' (T_STRING) in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 55
+[19-Apr-2016 13:40:03 America/Chicago] PHP Parse error:  syntax error, unexpected 'alert' (T_STRING) in /home2/pgerlich/public_html/__projects/buddys/php/Sendmail.php on line 55
+[19-Apr-2016 14:01:52 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 r10sm21531492oih.15 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/publ in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[19-Apr-2016 14:07:21 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 jy7sm13890581obb.13 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/publ in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[19-Apr-2016 14:49:39 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 h202sm21867732oic.17 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/pub in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[20-Apr-2016 13:05:50 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 ku6sm23054031obb.25 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/publ in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[20-Apr-2016 13:06:22 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 k6sm6970170oeo.10 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/public in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[20-Apr-2016 13:32:05 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 b3sm22915250otc.30 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/publi in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383

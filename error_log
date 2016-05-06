@@ -1,0 +1,8 @@
+[23-Feb-2016 18:48:09 America/Chicago] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/answer/14257 19sm289869pfb.64 - gsmtp
+"' in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 /home2/pgerlich/public_ in /home2/pgerlich/public_html/__projects/buddys/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
