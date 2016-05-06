@@ -5,7 +5,7 @@ if ( isset($_GET["ACCID"]) && isset($_GET["MONTH"]) && isset($_GET["DAY"])
     && isset($_GET["YEAR"]) && isset($_GET["FIRST"]) && isset($_GET["LAST"]) ) { //Check for inputs
 	require_once("stripe/stripe.php");
 
-	\Stripe\Stripe::setApiKey("sk_test_ShQv6vg74LT9CpEa6kXg8dwU");
+	\Stripe\Stripe::setApiKey("sk_live_8NPE6faNDGG5RJVXTfIxoD6y");
 
 	$account = \Stripe\Account::retrieve($_GET["ACCID"]);
 	$account->legal_entity->dob->month = $_GET['MONTH']; //DOB Month

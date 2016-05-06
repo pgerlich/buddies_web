@@ -54,28 +54,33 @@
 <body>
 <div id="page-top"></div>
 
-    <nav class="navbar navbar-default navbar-fixed-top vcenter ralign" role="navigation" style="background-color: red; z-index:10001;">
-      <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top vcenter ralign" role="navigation"
+     style="background-color: red; z-index:10001;">
+    <div class="container">
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse" >
-          <ul class="nav navbar-nav">
-            <li>
-              <a class="smoothScroll" href="index"><img src="img/BuddiesBonlySMALL.png" class="img img-responsive" /></a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="smoothScroll" href="index"><img src="img/BuddiesBonlySMALL.png"
+                                                              class="img img-responsive"/></a>
+                </li>
+            </ul>
         </div>
         <!-- /.navbar-collapse -->
-      </div>
+    </div>
 
-       <a id="simple-menu" href="#sidr"><button type="button" class="navbar-toggle" style="display:inline-block;margin-right:15px;background-color: red;">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar" style="background-color: white"></span>
-        <span class="icon-bar" style="background-color: white"></span>
-        <span class="icon-bar" style="background-color: white"></span>
+    <a id="simple-menu" href="#sidr">
+        <button type="button" class="navbar-toggle"
+                style="display:inline-block;margin-right:15px;background-color: red;">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar" style="background-color: white"></span>
+            <span class="icon-bar" style="background-color: white"></span>
+            <span class="icon-bar" style="background-color: white"></span>
 
-      </button></a>
-      <!-- /.container -->
-    </nav>
+        </button>
+    </a>
+    <!-- /.container -->
+</nav>
 
 <div class="container main-content" id="main-content-section" style="margin-top: 100px;">
     <div class="page-header">
@@ -108,8 +113,10 @@
         <div ng-show="role == 0">
             <h3>Vehicles</h3>
             <div ng-repeat="vehicle in vehicles" class="inline">
-                <button class="btn btn-default"  style="padding-right:2px">{{vehicle.color}} {{vehicle.year}}
-                    {{vehicle.make}} {{vehicle.model}} <i class="fa fa-times" style="padding-right:5px;padding-left:3px;" ng-click="removeVehicle(vehicle)"></i>
+                <button class="btn btn-default" style="padding-right:2px">{{vehicle.color}} {{vehicle.year}}
+                    {{vehicle.make}} {{vehicle.model}} <i class="fa fa-times"
+                                                          style="padding-right:5px;padding-left:3px;"
+                                                          ng-click="removeVehicle(vehicle)"></i>
                 </button>
             </div>
 
@@ -118,7 +125,9 @@
             <h3>Payment Information</h3>
             <div ng-repeat="card in cards" class="inline">
                 <button class="btn btn-default" style="padding-right:2px">
-                    {{card.brand}} ending in {{card.last4}} <i class="fa fa-times" style="padding-right:5px;padding-left:3px;" ng-click="removeCard(card)"></i>
+                    {{card.brand}} ending in {{card.last4}} <i class="fa fa-times"
+                                                               style="padding-right:5px;padding-left:3px;"
+                                                               ng-click="removeCard(card)"></i>
                 </button>
             </div>
             <button id="addPayment" class="btn btn-primary">+</button>
@@ -130,9 +139,11 @@
         <div ng-show="role == 1">
             <h3>Direct Deposit Information</h3>
             <p>Query/Display bank name</p>
-            <button id="addDD" class="btn btn-primary" ng-show="!bankAccount" ng-click="openBankModal()">Add Bank Information</button>
+            <button id="addDD" class="btn btn-primary" ng-show="!bankAccount" ng-click="openBankModal()">Add Bank
+                Information
+            </button>
             <button id="showDD" class="btn btn-default" ng-show="bankAccount">Bank Name</button>
-            <br /><br />
+            <br/><br/>
         </div>
 
         <!-- END EMPLOYEE SPECIFIC PROPERTIES -->
@@ -142,16 +153,16 @@
 
 </div><!-- /.container -->
 
-    <footer class="footer-distributed vcenter">
+<footer class="footer-distributed vcenter">
 
 
-        <div class="footer-center" style="text-align:center;width:100%">
-                <a href="https://www.facebook.com/WaterlessBuddys" target="_BLANK"><i class="fa fa-facebook"></i></a>
-                <a href="https://twitter.com/waterlessbuddys" target="_BLANK"><i class="fa fa-twitter"></i></a><br />
-      <p class="footer-company-name">Waterless Buddys &copy; 2016</p>
-        </div>
+    <div class="footer-center" style="text-align:center;width:100%">
+        <a href="https://www.facebook.com/WaterlessBuddys" target="_BLANK"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/waterlessbuddys" target="_BLANK"><i class="fa fa-twitter"></i></a><br/>
+        <p class="footer-company-name">Waterless Buddys &copy; 2016</p>
+    </div>
 
-    </footer>
+</footer>
 
 <div id="sidr" class="sidr" style="transition: left 0.2s ease; display:none;">
     <div class="sidr-inner">
@@ -219,8 +230,8 @@
         <div class="form-group">
             <label for="vehiclePicture">Picture of Vehicle</label>
             <div flow-init flow-name="vehiclePicture.flow">
-                <span class="btn btn-warning" flow-btn><i class="fa fa-upload"></i>Picture</span><br /><br />
-                <img class="img-responsive" flow-img="$flow.files[0]" width="250px" width="250px" />
+                <span class="btn btn-warning" flow-btn><i class="fa fa-upload"></i>Picture</span><br/><br/>
+                <img class="img-responsive" flow-img="$flow.files[0]" width="250px" width="250px"/>
             </div>
         </div>
     </div>
@@ -238,11 +249,13 @@
     <div class="modal-body">
         <div class="form-group">
             <label for="routingNumber">Routing Number</label>
-            <input type="text" id="routingNumber" ng-model="routingNumber" class="form-control" placeholder="111000025" required autofocus><br/>
+            <input type="text" id="routingNumber" ng-model="routingNumber" class="form-control" placeholder="111000025"
+                   required autofocus><br/>
         </div>
         <div class="form-group">
             <label for="accountNumber">Account Number</label>
-            <input type="text" id="accountNumber" ng-model="accountNumber" class="form-control" placeholder="000123456789" required><br/>
+            <input type="text" id="accountNumber" ng-model="accountNumber" class="form-control"
+                   placeholder="000123456789" required><br/>
         </div>
     </div>
     <div class="modal-footer">
@@ -253,16 +266,16 @@
 
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="js/libraries/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.0.3/ui-bootstrap-tpls.js"></script>
 
-<script src="js/ng-flow.js"></script>
+<script src="js/libraries/ng-flow.js"></script>
 
 <!-- Sidr -->
-<script src="js/jquery.sidr.js"></script>
+<script src="js/libraries/jquery.sidr.js"></script>
 
 <!-- Custom Javascript -->
 <script src="js/custom2.js"></script>
@@ -283,10 +296,10 @@
 <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
 
 <!-- Hammer.JS Gesture Detection -->
-<script src="js/hammer.js"></script>
+<script src="js/libraries/hammer.js"></script>
 
 <!-- Smooth same-page scrolling -->
-<script type="text/javascript" src="js/smoothscroll.js"></script>
+<script type="text/javascript" src="js/libraries/smoothscroll.js"></script>
 
 <!-- Stripe.js -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>

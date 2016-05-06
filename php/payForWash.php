@@ -3,7 +3,7 @@
 if ( isset($_GET['TIPAMT']) && isset($_GET['BASEAMT']) && isset($_GET['CID']) && isset($_GET['AID']) && isset($_GET['CCID']))
 	require_once("stripe/stripe.php");
 
-	\Stripe\Stripe::setApiKey("sk_test_ShQv6vg74LT9CpEa6kXg8dwU");
+	\Stripe\Stripe::setApiKey("sk_live_8NPE6faNDGG5RJVXTfIxoD6y");
 
 	$baseAmount = $_GET['BASEAMT'];
 	$tip = $_GET['TIPAMT'];
@@ -18,7 +18,6 @@ if ( isset($_GET['TIPAMT']) && isset($_GET['BASEAMT']) && isset($_GET['CID']) &&
 	//Someone is trying to hack us and pay less
 	if ( $baseAmount < 2000 ) {
 		echo "fraudulent charge detected.";
-		//TODO: Send mail with request information for fraud detection
 	//Process charge
 	} else {
 		echo \Stripe\Charge::create(array(

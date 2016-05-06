@@ -42,7 +42,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 			Checkout.js Stuffs
 		*/
 		var handler = StripeCheckout.configure({
-			key: 'pk_test_xWbIpv2iutPaLQ7o45yX1gu3',
+			key: 'pk_live_jxbocfSbluPltM1RahWXiyw6',
 			image: 'img/B.PNG',
 			locale: 'auto',
 			panelLabel: "Add Card",
