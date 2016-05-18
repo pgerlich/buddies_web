@@ -3,7 +3,7 @@
 if ( isset($_GET['TIPAMT']) && isset($_GET['BASEAMT']) && isset($_GET['CID']) && isset($_GET['AID']) && isset($_GET['CCID']))
 	require_once("stripe/stripe.php");
 
-	\Stripe\Stripe::setApiKey("sk_live_8NPE6faNDGG5RJVXTfIxoD6y");
+	\Stripe\Stripe::setApiKey("sk_test_ShQv6vg74LT9CpEa6kXg8dwU");
 
 	$baseAmount = $_GET['BASEAMT'];
 	$tip = $_GET['TIPAMT'];

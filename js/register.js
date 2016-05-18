@@ -24,7 +24,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 			Setup handler onCall (otherwise it initializes the email w/o a value)
 		*/
 		var handler = StripeCheckout.configure({
-			key: 'pk_live_jxbocfSbluPltM1RahWXiyw6',
+			key: 'pk_test_xWbIpv2iutPaLQ7o45yX1gu3',
 			image: 'img/B.PNG',
 			locale: 'auto',
 			panelLabel: "Add Card",
@@ -33,6 +33,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 			token: function(token) {
 			  $scope.cardToken = token.id;
 			  $scope.paymentAdded = true;
+			  $scope.$apply();
 			}
 		});
 
@@ -62,6 +63,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
 	    modalInstance.result.then(function (vehicle) {
 	    	$scope.vehicle = vehicle;
 	    	$scope.vehicleAdded = true;
+			$scope.$apply();
 	    }, function () {
 	    	//Modal was closed instead of saved
 	    });

@@ -171,7 +171,7 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
         success: function(newJob) {
             alert("Payment complete. Thank you for your business!");
             $scope.recordEmployeeAnalytic(newJob);
-            $scope.recordJobAnalytic(job);
+            $scope.recordJobAnalytics(newJob);
         },
         error: function(newJob, error) {
           alert('Failed to pay for job with error code: \"' + error.message + ' \" Please try again later.');
@@ -202,18 +202,100 @@ angular.module("myApp").controller("mainCtrl", function($scope, $uibModal){
         });
     }
 
-    $scope.recordJobAnalytic = function(job) {
+    $scope.recordJobAnalytics = function(job) {
+        $scope.timeAnalytic(job);
+        $scope.dayAnalytic(job);
+        $scope.sedanAnalytic(job);
+    }
+
+    $scope.timeAnalytic = function(job){
+        var timeString = job.get("time").split(' ')[0];
+        timeString = timeString.split(':')[0] + timeString.split('00')[1];
+
         var query = new Parse.Query("WashAnalytics");
-        query.equalTo("stat", job.get("time").split(' ')[0]);
+        query.equalTo("stat", timeString);
 
         query.find({
             success: function (jobAnalytic) {
                 var analytic = jobAnalytic[0];
-                analytic.set('value', Integer.valueOf(analytic.get('value')) + 1);
+
+                analytic.set('value', String(Number(analytic.get('value')) + 1));
 
                 analytic.save(null, {
-                    success: function(newJob) {
+                    success: function(newAnalytic) {
                         //TODO: Saved succesfully
+                    }
+                });
+            }
+        });
+    }
+
+    $scope.dayAnalytic = function(job){
+        var date = new Date(job.get('date'));
+        var day = date.getDay();
+        var analyticString;
+
+        var weekday = new Array(7);
+        weekday[0]=  "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        analyticString = weekday[day] + 'Washes';
+
+        var query = new Parse.Query("WashAnalytics");
+        query.equalTo("stat", analyticString);
+
+        query.find({
+            success: function (jobAnalytic) {
+                var analytic = jobAnalytic[0];
+                analytic.set('value', String(Number(analytic.get('value')) + 1));
+
+                analytic.save(null, {
+                    success: function(newAnalytic) {
+                        //TODO: Saved succesfully
+                    }
+                });
+            }
+        });
+    }
+
+    $scope.sedanAnalytic = function(job){
+        var query = new Parse.Query("Vehicles");
+        query.equalTo("objectId", job.get('vehicle').id);
+
+        query.find({
+            success: function (vehicles) {
+                var vehicle = vehicles[0];
+                var analyticString;
+
+                switch(Number(vehicle.get('type'))) {
+                    case 0:
+                        analyticString = 'Sedan';
+                        break;
+                    case 1:
+                        analyticString = 'NonSedan'
+                        break;
+                }
+
+                analyticString += 'Washes';
+
+                var query = new Parse.Query("WashAnalytics");
+                query.equalTo("stat", analyticString);
+
+                query.find({
+                    success: function (jobAnalytic) {
+                        var analytic = jobAnalytic[0];
+                        analytic.set('value', String(Number(analytic.get('value')) + 1));
+
+                        analytic.save(null, {
+                            success: function(newAnalytic) {
+                                //TODO: Saved succesfully
+                            }
+                        });
                     }
                 });
             }
